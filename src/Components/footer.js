@@ -1,9 +1,15 @@
 import React from 'react'
 
-const Footer = () => {
+const Footer = (props) => {
 
+    const {data} = props;
     return (
-        <p>Footer</p>
+        <div className='header'>
+            {data !== null && 
+            <div>
+                <p>{data.copyright}</p>
+            </div>}
+        </div>
     )
 }
 

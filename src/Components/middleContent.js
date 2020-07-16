@@ -1,9 +1,18 @@
 import React from 'react'
 
-const MiddleContent = () => {
 
+const MiddleContent = (props) => {
+
+    const {data} = props;
+    
     return (
-        <p>MiddleContent</p>
+        <div className='middleContent'>
+            {data !== null && 
+            <div>
+                <h2>{data.title}</h2>
+                <p>{data.explanation}</p>
+            </div>}
+        </div>
     )
 }
 
